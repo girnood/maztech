@@ -15,9 +15,7 @@
     decimalPlaces: 3,
     authorisedWhatsAppNumber: "96892727487",
     storageKey: "voltedge_store_cart_v3",
-    langStorageKey: "voltedge_store_lang_v3",
-    mandatoryDisclaimer:
-      "Educational prototype — demo products and prices — no online payment"
+    langStorageKey: "voltedge_store_lang_v3"
   };
 
   // 20 Real Electronics Products with Bilingual Names/Descriptions & Studio Photographs
@@ -843,14 +841,12 @@
       return isAr
         ? [
             "=== معاينة طلب متجر MAZTech للإلكترونيات ===",
-            `[${STORE_CONFIG.mandatoryDisclaimer}]`,
             "",
             "سلة المشتريات فارغة حالياً.",
             "أضف منتجات من الكتالوج لتوليد مسودة الطلب."
           ].join("\n")
         : [
-            "=== MAZTECH ELECTRONICS — DEMO REQUEST PREVIEW ===",
-            `[${STORE_CONFIG.mandatoryDisclaimer}]`,
+            "=== MAZTECH ELECTRONICS — ORDER PREVIEW ===",
             "",
             "Your cart is currently empty.",
             "Add products from the Online Catalogue to generate an order draft."
@@ -860,12 +856,12 @@
     const lines = isAr
       ? [
           "مرحباً متجر MAZTech للإلكترونيات،",
-          `أرغب في إرسال طلب جديد (${STORE_CONFIG.mandatoryDisclaimer}):`,
+          "أرغب في إرسال طلب جديد:",
           ""
         ]
       : [
           "Hello MAZTech Electronics,",
-          `I would like to submit a DEMO order request (${STORE_CONFIG.mandatoryDisclaimer}):`,
+          "I would like to submit a new order request:",
           ""
         ];
 
@@ -904,7 +900,6 @@
       );
     }
 
-    lines.push("", `[${STORE_CONFIG.mandatoryDisclaimer}]`);
     return lines.join("\n");
   }
 

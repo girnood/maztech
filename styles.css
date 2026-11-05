@@ -100,7 +100,7 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
-/* Top Prototype Notice & Language Switcher Bar */
+/* Top Utilities Bar */
 .top-bar {
   background-color: var(--brand-primary);
   color: #F8FAFC;
@@ -111,10 +111,9 @@ textarea:focus-visible {
 .top-bar-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-block: 8px;
+  justify-content: flex-end;
+  padding-block: 6px;
   gap: 12px;
-  flex-wrap: wrap;
 }
 
 .top-bar-notice {
@@ -1254,27 +1253,14 @@ textarea:focus-visible {
 
   /* Compact Top Bar on Mobile */
   .top-bar {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
   }
 
   .top-bar-inner {
     padding-block: 6px;
     gap: 8px;
     flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-
-  .top-bar-notice {
-    flex: 1;
-    min-width: 0;
-    font-size: 0.7rem;
-    line-height: 1.3;
-  }
-
-  .top-bar-notice #disclaimer-banner-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    justify-content: flex-end;
   }
 
   .top-bar-utilities {
