@@ -1354,11 +1354,7 @@
 
   function renderStorageAlert() {
     const alertEl = document.getElementById("storage-alert");
-    if (!alertEl) return;
-    if (storageNoticeMessage) {
-      alertEl.textContent = storageNoticeMessage;
-      alertEl.hidden = false;
-    } else {
+    if (alertEl) {
       alertEl.hidden = true;
     }
   }
