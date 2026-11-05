@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAZTech | متجر ماز تيك للإلكترونيات</title>
+  <!-- Google Fonts for Arabic (Cairo) & English (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link" id="skip-link-text">تخطي إلى المحتوى الرئيسي</a>
+
+  <!-- Top Announcement & Prototype Notice Bar -->
+  <div class="top-bar" role="region" aria-label="Notice">
+    <div class="container top-bar-inner">
+      <div class="top-bar-notice">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span id="disclaimer-banner-text">Educational prototype — demo products and prices — no online payment</span>
+      </div>
+      <div class="top-bar-utilities">
+        <span class="currency-pill">OMR (ر.ع)</span>
+        <button type="button" id="lang-toggle-btn" class="lang-switch-btn" aria-label="Switch Language / تغيير اللغة">
+          <span class="lang-icon" aria-hidden="true">🌐</span>
+          <span id="lang-toggle-label">English</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Store Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand-logo" data-nav="home" aria-label="MAZTech">
+        <div class="logo-icon" aria-hidden="true">⚡</div>
+        <div class="logo-text">
+          <span class="logo-title" id="brand-name-display">MAZTech</span>
+          <span class="logo-subtitle" id="brand-tagline-display">أحدث الإلكترونيات وملحقات المكتب الذكي</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li>
+            <button type="button" class="nav-link active" data-nav="home" id="nav-home" aria-current="page">
+              الرئيسية
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link" data-nav-cat="all" id="nav-cat-all">
+              كل المنتجات (20)
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link" data-nav-cat="charging" id="nav-cat-charging">
+              الشحن والطاقة
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link" data-nav-cat="audio" id="nav-cat-audio">
+              الصوتيات والعرض
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link" data-nav-cat="desk" id="nav-cat-desk">
+              المكتب والتخزين والشبكات
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link" data-nav="cart" id="nav-cart">
+              <span id="nav-cart-text">سلة المشتريات</span>
+              <span class="badge-count" id="nav-cart-count">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Storage Warning Banner -->
+  <div id="storage-alert" class="storage-alert" role="status" aria-live="polite" hidden></div>
+
+  <!-- Toast Notification Region -->
+  <div id="toast-region" class="toast-region" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Main View Container -->
+  <main id="main-content" class="main-wrapper" tabindex="-1">
+
+    <!-- =================================================================
+         SCREEN 1: HOME (الرئيسية)
+         ================================================================= -->
+    <section id="screen-home" class="screen active" aria-labelledby="home-headline">
+      <div class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="hero-badge" id="hero-eyebrow">متجر الإلكترونيات الحديثة • 20 منتجاً إلكترونياً</div>
+            <h1 id="home-headline" class="hero-headline">
+              أدوات إلكترونية احترافية مصممة للدراسة والعمل والمكتب العصري
+            </h1>
+            <p id="home-description" class="hero-description">
+              يوفر متجر MAZTech تشكيلة متكاملة من 20 منتجاً إلكترونياً تشمل الشواحن السريعة بتقنية GaN، السماعات المحيطية، الشاشات المحمولة، وحدات التخزين SSD، وملحقات المكتب الذكي.
+            </p>
+            <div class="hero-value-box" role="note">
+              <div class="value-icon" aria-hidden="true">🛡️</div>
+              <div>
+                <strong id="value-label">قيمتنا المضافة:</strong>
+                <span id="home-value-statement">
+                  مواصفات تقنية دقيقة، أسعار واضحة بالريال العُماني (OMR)، مع صفحة طلب سريعة تدعم الدفع عند الاستلام أو الدفع عن طريق الواتساب.
+                </span>
+              </div>
+            </div>
+            <div class="hero-cta-group">
+              <button type="button" class="btn btn-primary btn-lg" data-nav="catalogue" id="hero-shop-btn">
+                تصفح الـ 20 منتجاً الآن
+              </button>
+              <button type="button" class="btn btn-glass btn-lg" data-nav="cart" id="hero-checkout-btn">
+                عرض سلة المشتريات
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-showcase">
+            <div class="showcase-card">
+              <img
+                src="assets/product-2.png"
+                alt="Wireless Over-Ear Studio Headphones"
+                id="hero-featured-img"
+                class="showcase-img"
+                onerror="this.src='assets/ve-102.svg'"
+              />
+              <div class="showcase-floating-tag">
+                <span class="tag-label" id="hero-featured-tag">الأكثر طلباً للمكتب والدراسة</span>
+                <strong class="tag-price">OMR 24.750</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Store Trust Features -->
+      <div class="container features-strip">
+        <div class="feature-item">
+          <span class="feature-icon" aria-hidden="true">⚡</span>
+          <div>
+            <h2 id="feat-1-title">20 منتجاً إلكترونياً متنوعاً</h2>
+            <p id="feat-1-desc">تشكيلة شاملة من الشواحن، الصوتيات، الشاشات، الراوترات، ومستلزمات المكتب.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon" aria-hidden="true">🚚</span>
+          <div>
+            <h2 id="feat-2-title">الدفع عند الاستلام أو عبر واتساب</h2>
+            <p id="feat-2-desc">صفحة طلب واضحة بجميع بيانات الزبون مع خيار الدفع عند الاستلام أو عبر الواتساب.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon" aria-hidden="true">🌐</span>
+          <div>
+            <h2 id="feat-3-title">واجهة ثنائية اللغة (عربي / English)</h2>
+            <p id="feat-3-desc">تبديل فوري بين العربية (RTL) والإنجليزية (LTR) مع حفظ تلقائي لسلة المشتريات.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Products Preview on Home -->
+      <div class="container home-featured-block">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title" id="home-featured-title">منتجات مختارة من المتجر</h2>
+            <p class="section-subtitle" id="home-featured-subtitle">اكتشف تشكيلتنا الكاملة المكونة من 20 منتجاً إلكترونياً بأحدث المواصفات</p>
+          </div>
+          <button type="button" class="btn btn-outline" data-nav="catalogue" id="home-view-all-btn">
+            عرض جميع الـ 20 منتجاً ←
+          </button>
+        </div>
+        <div id="home-featured-grid" class="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SCREEN 2: ONLINE CATALOGUE (كتالوج المنتجات - 20 منتجاً)
+         ================================================================= -->
+    <section id="screen-catalogue" class="screen container" aria-labelledby="catalogue-heading" hidden>
+      <div class="section-head">
+        <div>
+          <h1 id="catalogue-heading" class="section-title">كتالوج الإلكترونيات (20 منتجاً)</h1>
+          <p id="catalogue-subtitle" class="section-subtitle">
+            جميع الأسعار بالريال العُماني (OMR - 3 خانات عشرية). إضافة منتج مكرر تزيد الكمية تلقائياً حتى 99 قطعة.
+          </p>
+        </div>
+        <div class="catalogue-toolbar">
+          <div class="filter-pills" role="group" aria-label="Product Categories">
+            <button type="button" class="pill-btn active" data-category="all" id="filter-all">الكل (20)</button>
+            <button type="button" class="pill-btn" data-category="charging" id="filter-charging">الشحن والطاقة</button>
+            <button type="button" class="pill-btn" data-category="audio" id="filter-audio">الصوتيات والعرض</button>
+            <button type="button" class="pill-btn" data-category="desk" id="filter-desk">المكتب والتخزين والشبكات</button>
+          </div>
+          <button type="button" class="btn btn-primary" data-nav="cart">
+            <span id="cat-go-cart-text">عرض السلة</span> (<span id="catalogue-cart-count">0</span>)
+          </button>
+        </div>
+      </div>
+
+      <div id="catalogue-grid" class="products-grid" role="list">
+        <!-- Populated dynamically by app.js (20 products) -->
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SCREEN 3: CART SELECTION (سلة المشتريات + معاينة واتساب)
+         ================================================================= -->
+    <section id="screen-cart" class="screen container" aria-labelledby="cart-heading" hidden>
+      <div class="section-head">
+        <div>
+          <h1 id="cart-heading" class="section-title">سلة المشتريات واختيار الكميات</h1>
+          <p id="cart-subtitle" class="section-subtitle">
+            تحكم في الكميات الصحيحة (من 1 إلى 99)، راجع الإجماليات الدقيقة، ثم انتقل لصفحة الطلب أو أرسل مسودة واتساب.
+          </p>
+        </div>
+        <div class="head-actions">
+          <button type="button" class="btn btn-outline" data-nav="catalogue" id="cart-continue-btn">
+            متابعة التسوق
+          </button>
+          <button type="button" id="clear-cart-btn" class="btn btn-danger">
+            إفراغ السلة
+          </button>
+        </div>
+      </div>
+
+      <!-- Empty Cart State -->
+      <div id="cart-empty-state" class="empty-cart-box" role="region" aria-label="Empty Cart">
+        <div class="empty-icon" aria-hidden="true">🛒</div>
+        <h2 id="empty-cart-title">سلة المشتريات فارغة حالياً</h2>
+        <p id="empty-cart-desc">أضف منتجات إلكترونية من الكتالوج لتفعيل حساب الإجماليات وصفحة الطلب والدفع.</p>
+        <button type="button" class="btn btn-primary btn-lg" data-nav="catalogue" id="empty-browse-btn">
+          تصفح المنتجات الإلكترونية (20 منتجاً)
+        </button>
+      </div>
+
+      <!-- Cart Workspace Grid -->
+      <div id="cart-workspace" class="cart-grid">
+        <!-- Left/Main Column: Cart Line Items -->
+        <div class="cart-items-card">
+          <div id="cart-items-list" class="cart-items-list"></div>
+
+          <div class="cart-totals-footer">
+            <div class="totals-row">
+              <span id="lbl-distinct-items">عدد الأصناف المختلفة:</span>
+              <strong id="summary-distinct-count">0</strong>
+            </div>
+            <div class="totals-row">
+              <span id="lbl-total-units">إجمالي عدد القطع:</span>
+              <strong id="summary-unit-count">0</strong>
+            </div>
+            <div class="totals-row grand-total-row">
+              <span id="lbl-grand-total">الإجمالي الكلي:</span>
+              <strong id="summary-grand-total">OMR 0.000</strong>
+            </div>
+
+            <div class="cart-proceed-bar">
+              <button type="button" id="proceed-checkout-btn" class="btn btn-primary btn-lg btn-block" data-nav="checkout">
+                المتابعة إلى صفحة الطلب وإدخال بيانات الزبون 📋
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SCREEN 4: ORDER & CHECKOUT PAGE (صفحة الطلب وبيانات الزبون والدفع)
+         ================================================================= -->
+    <section id="screen-checkout" class="screen container" aria-labelledby="checkout-heading" hidden>
+      <div class="section-head">
+        <div>
+          <h1 id="checkout-heading" class="section-title">صفحة الطلب وبيانات الزبون</h1>
+          <p id="checkout-subtitle" class="section-subtitle">
+            أدخل بيانات الزبون الكاملة واختر طريقة الدفع المناسبة (الدفع عند الاستلام أو الدفع عن طريق الواتساب).
+          </p>
+        </div>
+        <button type="button" class="btn btn-outline" data-nav="cart" id="back-to-cart-btn">
+          ← العودة إلى السلة
+        </button>
+      </div>
+
+      <div class="checkout-grid">
+        <!-- Customer Information & Payment Options Form -->
+        <form id="checkout-form" class="checkout-form-card" novalidate>
+          <div class="checkout-step-block">
+            <h2 class="step-heading" id="step-1-title">1. بيانات الزبون الكاملة</h2>
+
+            <!-- First Name & Last Name -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="cust-first-name" id="lbl-cust-first-name" class="form-label">الاسم الأول *</label>
+                <input type="text" id="cust-first-name" class="form-input" required placeholder="أحمد" />
+              </div>
+              <div class="form-group">
+                <label for="cust-last-name" id="lbl-cust-last-name" class="form-label">الاسم الثاني (العائلة) *</label>
+                <input type="text" id="cust-last-name" class="form-input" required placeholder="البلوشي" />
+              </div>
+            </div>
+
+            <!-- Country & Phone Number -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="cust-country" id="lbl-cust-country" class="form-label">الدولة *</label>
+                <select id="cust-country" class="form-input" required>
+                  <option value="سلطنة عُمان (Oman)">سلطنة عُمان (Oman)</option>
+                  <option value="الإمارات العربية المتحدة (UAE)">الإمارات العربية المتحدة (UAE)</option>
+                  <option value="المملكة العربية السعودية (Saudi Arabia)">المملكة العربية السعودية (Saudi Arabia)</option>
+                  <option value="الكويت (Kuwait)">الكويت (Kuwait)</option>
+                  <option value="قطر (Qatar)">قطر (Qatar)</option>
+                  <option value="البحرين (Bahrain)">البحرين (Bahrain)</option>
+                  <option value="الأردن (Jordan)">الأردن (Jordan)</option>
+                  <option value="مصر (Egypt)">مصر (Egypt)</option>
+                  <option value="دولة أخرى (Other)">دولة أخرى (Other)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cust-phone" id="lbl-cust-phone" class="form-label">رقم الهاتف *</label>
+                <input type="tel" id="cust-phone" class="form-input" dir="ltr" required placeholder="+968 9000 0000" />
+              </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label for="cust-email" id="lbl-cust-email" class="form-label">البريد الإلكتروني (الإيميل) *</label>
+              <input type="email" id="cust-email" class="form-input" dir="ltr" required placeholder="customer@example.com" />
+            </div>
+
+            <!-- Detailed Delivery Address (Optional extra clarity) -->
+            <div class="form-group">
+              <label for="cust-address" id="lbl-cust-address" class="form-label">المدينة / العنوان التفصيلي (اختياري)</label>
+              <input type="text" id="cust-address" class="form-input" placeholder="مسقط، الخوير، شارع السلطان قابوس" />
+            </div>
+          </div>
+
+          <div class="checkout-step-block">
+            <h2 class="step-heading" id="step-2-title">2. خيارات الدفع</h2>
+
+            <div class="payment-methods-grid" role="radiogroup" aria-labelledby="step-2-title">
+              <!-- Option 1: Cash on Delivery -->
+              <label class="payment-option selected" id="pay-opt-cod">
+                <input type="radio" name="paymentMethod" value="cod" checked />
+                <span class="pay-icon" aria-hidden="true">🚚</span>
+                <div class="pay-text">
+                  <strong id="pay-cod-title">الدفع عند الاستلام (Cash on Delivery)</strong>
+                  <span id="pay-cod-sub">ادفع قيمة الطلب عند استلام المنتجات من مندوب التوصيل</span>
+                </div>
+              </label>
+
+              <!-- Option 2: Payment via WhatsApp -->
+              <label class="payment-option" id="pay-opt-whatsapp">
+                <input type="radio" name="paymentMethod" value="whatsapp" />
+                <span class="pay-icon" aria-hidden="true">💬</span>
+                <div class="pay-text">
+                  <strong id="pay-wa-title">الدفع عن طريق الواتساب (Payment via WhatsApp)</strong>
+                  <span id="pay-wa-sub">فتح مسودة الطلب مع بياناتك في واتساب لترتيب الدفع والاستلام مباشرة</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <p id="checkout-form-error" class="form-error-msg" role="alert" hidden></p>
+
+          <button type="submit" id="submit-order-btn" class="btn btn-primary btn-lg btn-block">
+            تأكيد بيانات الطلب وإصدار الملخص (OMR 0.000)
+          </button>
+        </form>
+
+        <!-- Order Summary & Receipt Sidebar -->
+        <aside class="checkout-summary-card">
+          <h2 class="panel-title" id="checkout-summary-title">ملخص الطلبية</h2>
+          <div id="checkout-items-mini" class="checkout-items-mini"></div>
+
+          <div class="checkout-totals-box">
+            <div class="totals-row">
+              <span id="chk-lbl-subtotal">المجموع الفرعي:</span>
+              <strong id="chk-subtotal">OMR 0.000</strong>
+            </div>
+            <div class="totals-row">
+              <span id="chk-lbl-shipping">رسوم التوصيل:</span>
+              <strong id="chk-shipping" class="free-badge">مجاني (Free)</strong>
+            </div>
+            <div class="totals-row grand-total-row">
+              <span id="chk-lbl-total">الإجمالي المطلوب:</span>
+              <strong id="chk-total">OMR 0.000</strong>
+            </div>
+          </div>
+
+          <!-- Generated Order Summary Box -->
+          <div id="demo-receipt-modal" class="demo-receipt-box" hidden>
+            <div class="receipt-header">
+              <span class="receipt-check" aria-hidden="true">✅</span>
+              <div>
+                <h3 id="receipt-title">تم تجهيز ملخص الطلب ببيانات الزبون</h3>
+                <p id="receipt-disclaimer">Educational prototype — demo products and prices — no online payment</p>
+              </div>
+            </div>
+            <pre id="receipt-text-output" class="receipt-pre"></pre>
+            <div class="stack-actions">
+              <button type="button" id="copy-receipt-btn" class="btn btn-outline btn-block">
+                📋 نسخ تفاصيل الطلب الكامل
+              </button>
+              <button type="button" id="whatsapp-receipt-btn" class="btn btn-whatsapp btn-block">
+                💬 إرسال الطلب عبر واتساب الآن
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Store Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong class="footer-brand" id="footer-brand-title">⚡ MAZTech | متجر ماز تيك للإلكترونيات</strong>
+        <p class="footer-sub" id="footer-brand-desc">متجر متخصص في بيع الأدوات الإلكترونية الحديثة وملحقات المكتب والدراسة (20 منتجاً).</p>
+      </div>
+      <div class="footer-disclaimer-box">
+        <p class="footer-mandatory-note">Educational prototype — demo products and prices — no online payment</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

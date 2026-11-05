@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="1080p Auto-Focus Study Webcam with Privacy Cover illustration">
+  <rect width="320" height="200" fill="#0F172A"/>
+  <rect x="95" y="58" width="130" height="64" rx="32" fill="#1E293B" stroke="#0284C7" stroke-width="3"/>
+  <circle cx="160" cy="90" r="20" fill="#0B1120" stroke="#38BDF8" stroke-width="4"/>
+  <circle cx="160" cy="90" r="7" fill="#0284C7"/>
+  <circle cx="118" cy="90" r="4" fill="#38BDF8"/>
+  <path d="M135 122 L120 152 L200 152 L185 122 Z" fill="#334155"/>
+</svg>
